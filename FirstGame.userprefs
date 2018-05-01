@@ -1,10 +1,8 @@
 ﻿<Properties StartupConfiguration="{DE291B9A-8133-4877-A203-79466C9732AA}|Default">
   <MonoDevelop.Ide.ItemProperties.FirstGame PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FirstGame/View/Animation.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FirstGame/Controller/SpaceGame.cs">
     <Files>
-      <File FileName="FirstGame/Controller/SpaceGame.cs" Line="182" Column="24" />
-      <File FileName="FirstGame/Model/Enemy.cs" Line="119" Column="4" />
-      <File FileName="FirstGame/View/Animation.cs" Line="143" Column="1" />
+      <File FileName="FirstGame/Controller/SpaceGame.cs" Line="175" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
