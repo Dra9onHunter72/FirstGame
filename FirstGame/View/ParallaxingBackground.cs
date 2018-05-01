@@ -16,6 +16,7 @@ namespace FirstGame
 
 		// The speed which the background is moving
 		private int speed;
+
 		public void Initialize(ContentManager content, String texturePath, int screenWidth, int speed)
 		{
 			 // Load the background texture we will be using
@@ -40,7 +41,7 @@ namespace FirstGame
 		public void Update()
 		{
 			// Update the positions of the background
-    		for (int i = 0; i<positions.Length; i++)
+    		for (int i = 0; i < positions.Length; i++)
     		{
         		// Update the position of the screen by adding the speed
         		positions[i].X += speed;
@@ -58,16 +59,17 @@ namespace FirstGame
         		else
         		{
             		// Check if the texture is out of view then position it to the start of the screen
-            		if (positions[i].X >= texture.Width* (positions.Length - 1))
+					if (positions[i].X >= texture.Width * (positions.Length - 1))
             		{
-                 		positions[i].X = -texture.Width;
+             		    positions[i].X = -texture.Width;
             		}
+
         		}
     		}
 		}
 		public void Draw(SpriteBatch spriteBatch)
 		{
-			for (int i = 0; i<positions.Length; i++)
+			for (int i = 0; i < positions.Length; i++)
       		{
         		spriteBatch.Draw(texture, positions[i], Color.White);
     		}

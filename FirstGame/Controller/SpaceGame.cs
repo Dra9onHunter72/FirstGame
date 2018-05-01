@@ -115,6 +115,11 @@ namespace FirstGame.Controller
 			//Update the player
 			UpdatePlayer(gameTime);
 
+			// Update the parallaxing background
+			bgLayer1.Update();
+			bgLayer2.Update();
+
+
 			base.Update(gameTime);
 		}
 
@@ -126,21 +131,19 @@ namespace FirstGame.Controller
 		{
 			graphics.GraphicsDevice.Clear(Color.CornflowerBlue);
 
-			//TODO: Add your drawing code here
-
 			// Start drawing 
 			spriteBatch.Begin(); 
-			// Draw the Player 
-			player.Draw(spriteBatch); 
-			// Stop drawing 
-			spriteBatch.End();
-
+			//TODO: Add your drawing code here
 			spriteBatch.Draw(mainBackground, Vector2.Zero, Color.White);
 
 			// Draw the moving background
 			bgLayer1.Draw(spriteBatch);
 			bgLayer2.Draw(spriteBatch);
 
+			// Draw the Player 
+			player.Draw(spriteBatch); 
+			// Stop drawing 
+			spriteBatch.End();
 
 			base.Draw(gameTime);
 		}
