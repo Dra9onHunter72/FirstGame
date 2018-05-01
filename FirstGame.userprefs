@@ -2,7 +2,7 @@
   <MonoDevelop.Ide.ItemProperties.FirstGame PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="FirstGame/Controller/SpaceGame.cs">
     <Files>
-      <File FileName="FirstGame/Controller/SpaceGame.cs" Line="52" Column="20" />
+      <File FileName="FirstGame/Controller/SpaceGame.cs" Line="38" Column="22" />
       <File FileName="FirstGame/Model/Player.cs" Line="14" Column="23" />
     </Files>
   </MonoDevelop.Ide.Workbench>
