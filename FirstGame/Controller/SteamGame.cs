@@ -69,6 +69,11 @@ namespace FirstGame.Controller
 		// The music played during gameplay
 		private Song gameplayMusic;
 
+		//Number that holds the player score
+		private int score;
+		// The font used to display UI elements
+		private SpriteFont font;
+
 		public Game1()
 		{
 			graphics = new GraphicsDeviceManager(this);
@@ -110,6 +115,9 @@ namespace FirstGame.Controller
 			fireTime = TimeSpan.FromSeconds(.15f);
 
 			explosions = new List<Animation>();
+
+			//Set player's score to zero
+			score = 0;
 
 			base.Initialize();
 		}
@@ -238,6 +246,11 @@ namespace FirstGame.Controller
    				 explosions[i].Draw(spriteBatch);
 			}
 
+			// Draw the score
+			//spriteBatch.DrawString(font, "score: " + score, new Vector2(GraphicsDevice.Viewport.TitleSafeArea.X, GraphicsDevice.Viewport.TitleSafeArea.Y), Color.White);
+			// Draw the player health
+			//spriteBatch.DrawString(font, "health: " + player.Health, new Vector2(GraphicsDevice.Viewport.TitleSafeArea.X, GraphicsDevice.Viewport.TitleSafeArea.Y + 30), Color.White);
+
 			// Draw the Player 
 			player.Draw(spriteBatch);
 
@@ -289,7 +302,12 @@ namespace FirstGame.Controller
 				laserSound.Play();
 			}
 
-
+			// reset score if player health goes to zero
+			if (player.Health <= 0)
+			{
+    			player.Health = 100;
+    			score = 0;
+			}
 
 			player.Update(gameTime);
 		}
@@ -341,6 +359,10 @@ namespace FirstGame.Controller
 
 						// Play the explosion sound
 						explosionSound.Play();
+
+						//Add to the player's score
+						score += enemies[i].ScoreValue;
+
 					}
 
 					enemies.RemoveAt(i);
